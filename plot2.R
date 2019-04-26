@@ -11,7 +11,7 @@ global_active_power <- as.numeric(hhpconsump_subset$Global_active_power)
 DateTime_subset <- paste(hhpconsump_subset$Date, hhpconsump_subset$Time)
 TimeSeries <- strptime(DateTime_subset,"%d/%m/%Y%H:%M:%S")
 
-# Plot the graph using the hist function and create a png file of the graph plotted
+# Plot the graph using the plot function and create a png file of the graph plotted
 png("plot2.png", width = 480, height = 480)
 plot(TimeSeries, global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type = "l")
 
